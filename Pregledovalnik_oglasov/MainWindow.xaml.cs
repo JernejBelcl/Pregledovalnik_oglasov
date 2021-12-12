@@ -187,5 +187,26 @@ namespace Pregledovalnik_oglasov
             MessageBox.Show(" izvozi" + seznam.Count());
 
         }
+        private void FilterControl_OnFiltriranje(string s,string combo)
+        {
+            //items.Add(new ToDoItem { Naslov = "Item", Vsebina = s, Pomembnost = 1 });
+            ObservableCollection<Oglas> filter_oglas = new ObservableCollection<Oglas>();
+            foreach(var item in seznam)
+                {
+                    if(item.Model.Contains(s))
+                    {
+                        filter_oglas.Add(item);
+                    }
+             }
+            foreach (var item in seznam)
+            {
+                if (item.Znamka.Contains(combo))
+                {
+                    filter_oglas.Add(item);
+                }
+            }
+
+            list.ItemsSource = filter_oglas;
+        }
     }
 }

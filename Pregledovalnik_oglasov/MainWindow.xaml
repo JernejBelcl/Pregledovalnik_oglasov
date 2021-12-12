@@ -88,7 +88,7 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-
+        <local:FilterControl Grid.Column="0" Grid.Row="3" OnFiltriranje="Filtriranje"/>
         <StackPanel Grid.Row="4" Grid.Column="3">
             <TextBlock Text="Poišči želen oglas"/>
             <TextBox Text="Vnesite Besedilo ..." Name="txtbox" />
