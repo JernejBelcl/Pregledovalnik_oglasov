@@ -16,8 +16,8 @@
         </Grid.RowDefinitions>
 
         <TextBlock TextAlignment="Center" FontSize="15" FontWeight="Bold" Text="Filtriranje" Name="titleBlock" />
-        <TextBox Text="..." Grid.Row="1" FontSize="18" Name="editBox" />
-        <ComboBox Grid.Row="2" Name="comboBoxZnamka" />
+        <ComboBox Grid.Row="1" Name="comboBoxZnamka" />
+        <TextBox Text="..." Grid.Row="2" FontSize="12" Name="editBox" />
         <Button Content="Filtriraj" Grid.Row="3" Click="Filtriraj" />
     </Grid>
 </UserControl>
