@@ -1,0 +1,45 @@
+﻿<Window x:Class="Pregledovalnik_oglasov.EditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pregledovalnik_oglasov"
+        mc:Ignorable="d"
+        Title="EditWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+
+
+        <Button Click="NaloziSliko">
+            <Image Name="img"/>
+        </Button>
+        <StackPanel Grid.Row="0" Grid.Column="1">
+            <TextBlock FontWeight="Bold" Name="Naslov"/>
+            <Label>Naziv</Label>
+        <TextBox Name="NazivTxt"/>
+            <Label>Znamka</Label>
+            <ComboBox Name="ZnamkaTxt" />
+            <Label>Model</Label>
+            <TextBox Name="ModelTxt" />
+            <Label>Letnik</Label>
+            <TextBox Name="LetnikTxt"/>
+            <Label>Cena</Label>
+            <TextBox Name="CenaTxt" />
+            <Label>Slika</Label>
+            <TextBox Name="SlikaTxt"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Content="OK" Width="75" Height="35" Margin="5" IsDefault="true" Click="Ok_Click"/>
+            <Button Content="Cancel" Width="75" Height="35" Margin="5" IsCancel="True"/>
+
+        </StackPanel>
+
+    </Grid>
+</Window>
